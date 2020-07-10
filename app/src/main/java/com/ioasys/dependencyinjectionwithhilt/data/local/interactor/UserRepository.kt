@@ -1,4 +1,4 @@
-package com.jomar.senhorpintor.data.local.interactor.budget.user
+package com.ioasys.dependencyinjectionwithhilt.data.local.interactor
 
 import com.ioasys.dependencyinjectionwithhilt.model.User
 

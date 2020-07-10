@@ -1,17 +1,23 @@
 package com.ioasys.dependencyinjectionwithhilt.ui.login
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.ioasys.dependencyinjectionwithhilt.R
+import com.ioasys.dependencyinjectionwithhilt.model.User
+import com.ioasys.dependencyinjectionwithhilt.presentation.register.RegisterViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_login.*
+import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
+class LoginFragment: Fragment() {
 
-class LoginFragment : Fragment() {
+     private val viewModel: RegisterViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,12 +32,14 @@ class LoginFragment : Fragment() {
     }
 
     private fun setup() {
-        username
-        Log.i("TAG", "LoginFragment")
-
-        register.setOnClickListener {
-            Toast.makeText(context,"Hey", Toast.LENGTH_SHORT).show()
+        btn_register.setOnClickListener {
+            register(edt_username.text.toString())
         }
+    }
+
+     fun register(text: String) = lifecycleScope.launch {
+        val user = User(null, text)
+        viewModel.saveUser(user)
     }
 
 }

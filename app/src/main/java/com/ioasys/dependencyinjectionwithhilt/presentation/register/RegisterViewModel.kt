@@ -1,12 +1,16 @@
 package com.ioasys.dependencyinjectionwithhilt.presentation.register
 
+import androidx.hilt.lifecycle.ViewModelInject
+import androidx.lifecycle.ViewModel
+import com.ioasys.dependencyinjectionwithhilt.data.local.interactor.UserInteractor
 import com.ioasys.dependencyinjectionwithhilt.model.User
-import com.jomar.senhorpintor.data.local.interactor.budget.user.UserInteractor
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import javax.inject.Inject
 
-class RegisterViewModel @Inject constructor (private val userInteractor: UserInteractor) {
+//TODO 08
+class RegisterViewModel @ViewModelInject constructor (
+    private val userInteractor: UserInteractor) : ViewModel(){
+//TODO 08
 
     lateinit var myUser: User
 
@@ -22,7 +26,5 @@ class RegisterViewModel @Inject constructor (private val userInteractor: UserInt
         myUser = userInteractor.getUser()
     }
 
-//    suspend fun makeFirstAccess() = withContext(Dispatchers.IO) {
-//        preferencesRepository.makeFirstRunning()
-//    }
+
 }

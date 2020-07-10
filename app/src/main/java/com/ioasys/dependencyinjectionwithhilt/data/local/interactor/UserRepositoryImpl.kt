@@ -1,11 +1,11 @@
-package com.jomar.senhorpintor.data.local.interactor.budget.user
+package com.ioasys.dependencyinjectionwithhilt.data.local.interactor
 
 import com.ioasys.dependencyinjectionwithhilt.dao.UserDao
 import com.ioasys.dependencyinjectionwithhilt.model.User
 import javax.inject.Inject
 
 //TODO 06
-class UserRepositoryImpl @Inject constructor (private val userDao: UserDao) : UserRepository {
+class UserRepositoryImpl @Inject constructor ( val userDao: UserDao) : UserRepository {
     override suspend fun saveUser(user: User) {
         userDao.insertUser(user)
     }
