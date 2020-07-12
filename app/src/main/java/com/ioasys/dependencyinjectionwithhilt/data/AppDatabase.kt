@@ -5,7 +5,6 @@ import androidx.room.RoomDatabase
 import com.ioasys.dependencyinjectionwithhilt.dao.UserDao
 import com.ioasys.dependencyinjectionwithhilt.model.User
 
-
 @Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao

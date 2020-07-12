@@ -1,11 +1,12 @@
-package com.ioasys.dependencyinjectionwithhilt.data.local.interactor
+package com.ioasys.dependencyinjectionwithhilt.data.local.repository
 
 import com.ioasys.dependencyinjectionwithhilt.dao.UserDao
+import com.ioasys.dependencyinjectionwithhilt.data.local.repository.UserRepository
 import com.ioasys.dependencyinjectionwithhilt.model.User
 import javax.inject.Inject
 
-//TODO 06
-class UserRepositoryImpl @Inject constructor ( val userDao: UserDao) : UserRepository {
+class UserRepositoryImpl @Inject constructor ( val userDao: UserDao) :
+    UserRepository {
     override suspend fun saveUser(user: User) {
         userDao.insertUser(user)
     }

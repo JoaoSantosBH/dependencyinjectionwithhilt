@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class LoginFragment: Fragment() {
+class RegisterFragment: Fragment() {
 
      private val viewModel: RegisterViewModel by viewModels()
 

@@ -7,10 +7,9 @@ import com.ioasys.dependencyinjectionwithhilt.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-//TODO 08
 class RegisterViewModel @ViewModelInject constructor (
-    private val userInteractor: UserInteractor) : ViewModel(){
-//TODO 08
+    private val userInteractor: UserInteractor
+) : ViewModel(){
 
     lateinit var myUser: User
 
@@ -25,6 +24,5 @@ class RegisterViewModel @ViewModelInject constructor (
     suspend fun getUser() = withContext(Dispatchers.IO) {
         myUser = userInteractor.getUser()
     }
-
 
 }

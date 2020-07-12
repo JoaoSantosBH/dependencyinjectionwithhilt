@@ -1,4 +1,4 @@
-package com.ioasys.dependencyinjectionwithhilt.data.local.interactor
+package com.ioasys.dependencyinjectionwithhilt.data.local.repository
 
 import com.ioasys.dependencyinjectionwithhilt.model.User
 
