@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ioasys.dependencyinjectionwithhilt.R
 import com.ioasys.dependencyinjectionwithhilt.model.Task
 
-class TasksAdapter(val myTasksList: List<Task>) : RecyclerView.Adapter<TaskViewHolder>() {
+class TasksAdapter(private val myTasksList: List<Task>) : RecyclerView.Adapter<TaskViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder =
         TaskViewHolder(

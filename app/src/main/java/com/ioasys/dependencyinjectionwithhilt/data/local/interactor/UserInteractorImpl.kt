@@ -4,7 +4,7 @@ import com.ioasys.dependencyinjectionwithhilt.data.local.repository.UserReposito
 import com.ioasys.dependencyinjectionwithhilt.model.User
 import javax.inject.Inject
 
-class UserInteractorImpl @Inject constructor( val userRepository: UserRepository): UserInteractor {
+class UserInteractorImpl @Inject constructor(private val userRepository: UserRepository): UserInteractor {
     override suspend fun saveUser(user: User) {
        userRepository.saveUser(user)
     }

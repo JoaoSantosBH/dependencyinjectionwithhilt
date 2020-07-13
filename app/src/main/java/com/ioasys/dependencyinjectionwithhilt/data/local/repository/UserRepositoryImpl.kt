@@ -4,7 +4,7 @@ import com.ioasys.dependencyinjectionwithhilt.dao.UserDao
 import com.ioasys.dependencyinjectionwithhilt.model.User
 import javax.inject.Inject
 
-class UserRepositoryImpl @Inject constructor ( val userDao: UserDao) :
+class UserRepositoryImpl @Inject constructor (private val userDao: UserDao) :
     UserRepository {
     override suspend fun saveUser(user: User) {
         userDao.insertUser(user)
