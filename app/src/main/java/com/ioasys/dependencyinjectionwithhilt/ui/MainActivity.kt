@@ -1,4 +1,4 @@
-package com.ioasys.dependencyinjectionwithhilt.ui.login
+package com.ioasys.dependencyinjectionwithhilt.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

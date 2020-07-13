@@ -1,4 +1,4 @@
-package com.ioasys.dependencyinjectionwithhilt.ui.login
+package com.ioasys.dependencyinjectionwithhilt.ui.register
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.ioasys.dependencyinjectionwithhilt.R
 import com.ioasys.dependencyinjectionwithhilt.model.User
 import com.ioasys.dependencyinjectionwithhilt.presentation.register.RegisterViewModel
@@ -40,6 +41,7 @@ class RegisterFragment: Fragment() {
      fun register(text: String) = lifecycleScope.launch {
         val user = User(null, text)
         viewModel.saveUser(user)
+         findNavController().navigate(R.id.action_loginFragment_to_tasksFragment)
     }
 
 }
