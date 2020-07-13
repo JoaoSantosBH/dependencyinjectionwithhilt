@@ -14,6 +14,7 @@ import com.ioasys.dependencyinjectionwithhilt.presentation.tasks.TasksViewModel
 import com.ioasys.dependencyinjectionwithhilt.ui.tasks.adapter.TasksAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_tasks.*
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -21,12 +22,7 @@ class TasksFragment : Fragment() {
 
     private val adapter by lazy { createTaskAdapter() }
     private val viewModel: TasksViewModel by viewModels()
-    lateinit var list: List<Task>
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-    }
-    private fun createTaskAdapter() = TasksAdapter(list)
+    private fun createTaskAdapter() = TasksAdapter(viewModel.myTasks)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +31,8 @@ class TasksFragment : Fragment() {
     }
 
     private fun getTasks() = lifecycleScope.launch {
-       list = viewModel.getTasks()
+        viewModel.getTasks()
+        setupAdapter()
     }
 
     override fun onCreateView(
@@ -45,15 +42,8 @@ class TasksFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_tasks, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        setupView()
-    }
 
-    private fun setupView() {
-        list = viewModel.myTasks
-
-        myTaskRecycler.layoutManager = LinearLayoutManager(context)
+    private fun setupAdapter() {
         myTaskRecycler.adapter = adapter
 
     }
