@@ -2,8 +2,8 @@ package com.ioasys.dependencyinjectionwithhilt.presentation.tasks
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
-import com.ioasys.dependencyinjectionwithhilt.data.remote.interactor.RemoteApi
-import com.ioasys.dependencyinjectionwithhilt.data.remote.interactor.Success
+import com.ioasys.dependencyinjectionwithhilt.data.remote.service.RemoteApi
+import com.ioasys.dependencyinjectionwithhilt.data.remote.response.Success
 import com.ioasys.dependencyinjectionwithhilt.model.Task
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

@@ -1,7 +1,7 @@
 package com.ioasys.dependencyinjectionwithhilt.di
 
 import com.ioasys.dependencyinjectionwithhilt.BuildConfig
-import com.ioasys.dependencyinjectionwithhilt.data.remote.RemoteApiService
+import com.ioasys.dependencyinjectionwithhilt.data.remote.service.RemoteApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

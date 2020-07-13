@@ -1,4 +1,4 @@
-package com.ioasys.dependencyinjectionwithhilt.data.remote
+package com.ioasys.dependencyinjectionwithhilt.data.remote.service
 
 import com.ioasys.dependencyinjectionwithhilt.model.Task
 import retrofit2.http.GET

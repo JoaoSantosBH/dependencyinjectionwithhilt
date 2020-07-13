@@ -1,4 +1,4 @@
-package com.ioasys.dependencyinjectionwithhilt.data.remote.interactor
+package com.ioasys.dependencyinjectionwithhilt.data.remote.response
 
 sealed class Result<out T : Any>
 
