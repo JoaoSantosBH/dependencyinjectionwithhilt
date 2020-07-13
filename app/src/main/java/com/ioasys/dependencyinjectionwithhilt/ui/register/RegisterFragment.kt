@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.ioasys.dependencyinjectionwithhilt.R
 import com.ioasys.dependencyinjectionwithhilt.model.User
 import com.ioasys.dependencyinjectionwithhilt.presentation.register.RegisterViewModel
+import com.ioasys.dependencyinjectionwithhilt.ui.showToastMessage
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_register.*
 import kotlinx.coroutines.launch
@@ -34,7 +35,11 @@ class RegisterFragment: Fragment() {
 
     private fun setup() {
         btn_register.setOnClickListener {
-            register(edt_username.text.toString())
+            if (edt_username.text.isNotEmpty()){
+                register(edt_username.text.toString())
+            } else {
+                requireContext().showToastMessage(getString(R.string.validate_fields))
+            }
         }
     }
 
