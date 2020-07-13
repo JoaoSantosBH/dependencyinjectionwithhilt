@@ -7,14 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.ioasys.dependencyinjectionwithhilt.R
-import com.ioasys.dependencyinjectionwithhilt.model.Task
 import com.ioasys.dependencyinjectionwithhilt.presentation.tasks.TasksViewModel
 import com.ioasys.dependencyinjectionwithhilt.ui.tasks.adapter.TasksAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_tasks.*
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint

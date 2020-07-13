@@ -1,7 +1,6 @@
 package com.ioasys.dependencyinjectionwithhilt.data.local.repository
 
 import com.ioasys.dependencyinjectionwithhilt.dao.UserDao
-import com.ioasys.dependencyinjectionwithhilt.data.local.repository.UserRepository
 import com.ioasys.dependencyinjectionwithhilt.model.User
 import javax.inject.Inject
 
