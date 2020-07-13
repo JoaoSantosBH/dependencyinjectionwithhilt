@@ -24,7 +24,6 @@ class TasksFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         getTasks()
-
     }
 
     private fun getTasks() = lifecycleScope.launch {
@@ -42,6 +41,5 @@ class TasksFragment : Fragment() {
 
     private fun setupAdapter() {
         myTaskRecycler.adapter = adapter
-
     }
 }

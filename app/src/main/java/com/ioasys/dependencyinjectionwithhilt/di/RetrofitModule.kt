@@ -1,5 +1,6 @@
 package com.ioasys.dependencyinjectionwithhilt.di
 
+import com.ioasys.dependencyinjectionwithhilt.BuildConfig
 import com.ioasys.dependencyinjectionwithhilt.data.remote.RemoteApiService
 import dagger.Module
 import dagger.Provides
@@ -18,37 +19,32 @@ object RetrofitModule {
 
     private const val BASE_URL = "https://jsonplaceholder.typicode.com"
 
+    @Provides
+    fun provideBaseUrl() = BASE_URL
 
-
-@Provides
-fun provideBaseUrl() = BASE_URL
-
-@Provides
-@Singleton
-fun provideOkHttpClient() = if (0 < 1) {
-    val loggingInterceptor = HttpLoggingInterceptor()
-    loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
-    OkHttpClient.Builder()
-        .addInterceptor(loggingInterceptor)
-        .build()
-} else OkHttpClient
-    .Builder()
-    .build()
-
-
-@Provides
-@Singleton
-fun provideRetrofit(okHttpClient: OkHttpClient, BASE_URL: String): Retrofit =
-    Retrofit.Builder()
-        .addConverterFactory(MoshiConverterFactory.create())
-        .baseUrl(BASE_URL)
-        .client(okHttpClient)
+    @Provides
+    @Singleton
+    fun provideOkHttpClient() = if (BuildConfig.DEBUG) {
+        val loggingInterceptor = HttpLoggingInterceptor()
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
+        OkHttpClient.Builder()
+            .addInterceptor(loggingInterceptor)
+            .build()
+    } else OkHttpClient
+        .Builder()
         .build()
 
-@Provides
-@Singleton
-fun provideApiService(retrofit: Retrofit) = retrofit.create(RemoteApiService::class.java)
+    @Provides
+    @Singleton
+    fun provideRetrofit(okHttpClient: OkHttpClient, BASE_URL: String): Retrofit =
+        Retrofit.Builder()
+            .addConverterFactory(MoshiConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .client(okHttpClient)
+            .build()
 
-
+    @Provides
+    @Singleton
+    fun provideApiService(retrofit: Retrofit) = retrofit.create(RemoteApiService::class.java)
 
 }
