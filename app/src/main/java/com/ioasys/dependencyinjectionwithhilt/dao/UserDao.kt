@@ -14,6 +14,6 @@ interface UserDao {
     @Update
     fun updateUser(user: User)
 
-    @Query("SELECT * FROM User")
+    @Query("SELECT * FROM User order by id DESC")
     fun getUser(): User
 }

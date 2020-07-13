@@ -9,7 +9,7 @@
         android:id="@+id/loginFragment"
         android:name="com.ioasys.dependencyinjectionwithhilt.ui.register.RegisterFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_loginFragment_to_tasksFragment"
             app:destination="@id/tasksFragment" />
