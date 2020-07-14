@@ -5,6 +5,7 @@ apply plugin: 'kotlinx-serialization'
 
 apply plugin: 'kotlin-kapt'
 apply plugin: 'dagger.hilt.android.plugin'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -20,7 +21,7 @@ android {
     }
 
     buildTypes {
-        debug{
+        debug {
 
         }
         release {
@@ -33,6 +34,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
