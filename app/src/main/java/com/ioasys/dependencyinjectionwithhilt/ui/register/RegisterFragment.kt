@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.ioasys.dependencyinjectionwithhilt.R
 import com.ioasys.dependencyinjectionwithhilt.model.User
 import com.ioasys.dependencyinjectionwithhilt.presentation.register.RegisterViewModel
+import com.ioasys.dependencyinjectionwithhilt.ui.hideKeyboard
 import com.ioasys.dependencyinjectionwithhilt.ui.showToastMessage
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_register.*
@@ -35,6 +36,7 @@ class RegisterFragment: Fragment() {
 
     private fun setup() {
         btn_register.setOnClickListener {
+            hideKeyboard()
             if (edt_username.text.isNotEmpty()){
                 register(edt_username.text.toString())
             } else {

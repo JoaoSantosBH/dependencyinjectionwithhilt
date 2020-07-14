@@ -1,7 +1,9 @@
 package com.ioasys.dependencyinjectionwithhilt.ui
 
+import android.app.Activity
 import android.content.Context
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
@@ -21,4 +23,12 @@ fun Fragment.getColorCompat(@ColorRes colorRes: Int) =
 
 fun Context.showToastMessage(string: String) {
     return Toast.makeText(this, string,Toast.LENGTH_SHORT).show()
+}
+
+fun Fragment.hideKeyboard() {
+    val inputMethodManager =
+        requireActivity().getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+
+    val windowToken = view?.rootView?.windowToken
+    inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
 }

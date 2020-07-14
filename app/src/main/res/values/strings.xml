@@ -1,10 +1,10 @@
 <resources>
 
-    <string name="app_name">Exemplo DI Hilt</string>
+    <string name="app_name">Hilt</string>
     <string name="prompt_email">Digite o seu nome</string>
     <string name="action_sign_in">Registrar</string>
-    <string name="api_tasks">Tarefas da API</string>
+    <string name="api_tasks">Suas tarefas: </string>
     <string name="welcome_msg">Seja bem vindo, %s!</string>
-    <string name="validate_fields">Por faor preencha seu nome</string>
+    <string name="validate_fields">Por favor preencha seu nome</string>
 
 </resources>

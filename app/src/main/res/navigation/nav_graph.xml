@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_loginFragment_to_tasksFragment"
-            app:destination="@id/tasksFragment" />
+            app:destination="@id/tasksFragment"
+            app:enterAnim="@anim/slide_right_to_middle"
+            app:exitAnim="@anim/slide_middle_to_left"
+            app:popEnterAnim="@anim/slide_left_to_middle"
+            app:popExitAnim="@anim/slide_middle_to_right"/>
     </fragment>
     <fragment
         android:id="@+id/tasksFragment"
