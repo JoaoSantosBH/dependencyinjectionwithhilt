@@ -3,7 +3,7 @@ package com.ioasys.dependencyinjectionwithhilt.data.remote.service
 import com.ioasys.dependencyinjectionwithhilt.data.remote.response.Failure
 import com.ioasys.dependencyinjectionwithhilt.data.remote.response.Result
 import com.ioasys.dependencyinjectionwithhilt.data.remote.response.Success
-import com.ioasys.dependencyinjectionwithhilt.model.Task
+import com.ioasys.dependencyinjectionwithhilt.domain.model.Task
 import javax.inject.Inject
 
 class RemoteApiImpl @Inject constructor(

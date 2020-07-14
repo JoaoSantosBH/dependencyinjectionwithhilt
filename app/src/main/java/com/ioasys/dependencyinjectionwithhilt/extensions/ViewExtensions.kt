@@ -1,4 +1,4 @@
-package com.ioasys.dependencyinjectionwithhilt.ui
+package com.ioasys.dependencyinjectionwithhilt.extensions
 
 import android.app.Activity
 import android.content.Context

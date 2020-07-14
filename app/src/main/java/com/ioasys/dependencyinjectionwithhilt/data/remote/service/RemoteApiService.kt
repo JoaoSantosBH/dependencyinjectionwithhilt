@@ -1,6 +1,6 @@
 package com.ioasys.dependencyinjectionwithhilt.data.remote.service
 
-import com.ioasys.dependencyinjectionwithhilt.model.Task
+import com.ioasys.dependencyinjectionwithhilt.domain.model.Task
 import retrofit2.http.GET
 
 interface RemoteApiService {

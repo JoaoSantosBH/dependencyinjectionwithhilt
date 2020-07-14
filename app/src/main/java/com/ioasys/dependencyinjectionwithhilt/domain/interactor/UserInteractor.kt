@@ -1,5 +1,5 @@
-package com.ioasys.dependencyinjectionwithhilt.data.local.interactor
-import com.ioasys.dependencyinjectionwithhilt.model.User
+package com.ioasys.dependencyinjectionwithhilt.domain.interactor
+import com.ioasys.dependencyinjectionwithhilt.domain.model.User
 
 interface UserInteractor {
     suspend fun saveUser(user: User)

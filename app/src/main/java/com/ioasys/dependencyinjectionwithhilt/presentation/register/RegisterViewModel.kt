@@ -2,8 +2,8 @@ package com.ioasys.dependencyinjectionwithhilt.presentation.register
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
-import com.ioasys.dependencyinjectionwithhilt.data.local.interactor.UserInteractor
-import com.ioasys.dependencyinjectionwithhilt.model.User
+import com.ioasys.dependencyinjectionwithhilt.domain.interactor.UserInteractor
+import com.ioasys.dependencyinjectionwithhilt.domain.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

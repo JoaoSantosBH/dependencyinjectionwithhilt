@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ioasys.dependencyinjectionwithhilt.R
-import com.ioasys.dependencyinjectionwithhilt.model.Task
+import com.ioasys.dependencyinjectionwithhilt.domain.model.Task
 
 class TasksAdapter(private val myTasksList: List<Task>) : RecyclerView.Adapter<TaskViewHolder>() {
 

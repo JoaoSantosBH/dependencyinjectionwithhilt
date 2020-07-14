@@ -13,9 +13,9 @@ import androidx.lifecycle.lifecycleScope
 import com.ioasys.dependencyinjectionwithhilt.R
 import com.ioasys.dependencyinjectionwithhilt.presentation.register.RegisterViewModel
 import com.ioasys.dependencyinjectionwithhilt.presentation.tasks.TasksViewModel
-import com.ioasys.dependencyinjectionwithhilt.ui.getColorCompat
-import com.ioasys.dependencyinjectionwithhilt.ui.hide
-import com.ioasys.dependencyinjectionwithhilt.ui.show
+import com.ioasys.dependencyinjectionwithhilt.extensions.getColorCompat
+import com.ioasys.dependencyinjectionwithhilt.extensions.hide
+import com.ioasys.dependencyinjectionwithhilt.extensions.show
 import com.ioasys.dependencyinjectionwithhilt.ui.tasks.adapter.TasksAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_tasks.*
@@ -56,6 +56,7 @@ class TasksFragment : Fragment() {
     private fun getLastUserAdded()  = lifecycleScope.launch {
         registerViewModel.getUser()
     }
+
     private fun setUpName() {
         registerViewModel.myUser?.let {
             val spanString =
@@ -69,9 +70,9 @@ class TasksFragment : Fragment() {
             tv_welcome.text = spanString
         }
     }
+
     private fun setupAdapter() {
         myTaskRecycler.adapter = adapter
         loading.hide()
-
     }
 }

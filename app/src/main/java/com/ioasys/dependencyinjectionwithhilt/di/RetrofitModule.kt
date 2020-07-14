@@ -1,5 +1,6 @@
 package com.ioasys.dependencyinjectionwithhilt.di
 
+import com.ioasys.dependencyinjectionwithhilt.BASE_URL
 import com.ioasys.dependencyinjectionwithhilt.BuildConfig
 import com.ioasys.dependencyinjectionwithhilt.data.remote.service.RemoteApiService
 import dagger.Module
@@ -18,7 +19,6 @@ import javax.inject.Singleton
 
 object RetrofitModule {
 
-    private const val BASE_URL = "https://jsonplaceholder.typicode.com"
 
     @Provides
     fun provideBaseUrl() = BASE_URL

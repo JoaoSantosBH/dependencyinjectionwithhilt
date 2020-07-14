@@ -4,7 +4,7 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import com.ioasys.dependencyinjectionwithhilt.data.remote.service.RemoteApi
 import com.ioasys.dependencyinjectionwithhilt.data.remote.response.Success
-import com.ioasys.dependencyinjectionwithhilt.model.Task
+import com.ioasys.dependencyinjectionwithhilt.domain.model.Task
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -19,6 +19,7 @@ class TasksViewModel @ViewModelInject constructor(private val remoteApi: RemoteA
         }
         return@withContext myTasks
     }
+
 }
 
 

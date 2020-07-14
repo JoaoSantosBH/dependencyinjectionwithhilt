@@ -1,7 +1,7 @@
 package com.ioasys.dependencyinjectionwithhilt.dao
 
 import androidx.room.*
-import com.ioasys.dependencyinjectionwithhilt.model.User
+import com.ioasys.dependencyinjectionwithhilt.domain.model.User
 import javax.inject.Singleton
 
 @Dao
@@ -16,4 +16,5 @@ interface UserDao {
 
     @Query("SELECT * FROM User order by id DESC")
     fun getUser(): User
+
 }

@@ -1,4 +1,4 @@
-package com.ioasys.dependencyinjectionwithhilt.model
+package com.ioasys.dependencyinjectionwithhilt.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

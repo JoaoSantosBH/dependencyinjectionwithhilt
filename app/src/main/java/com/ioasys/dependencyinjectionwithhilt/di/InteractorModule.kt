@@ -1,7 +1,7 @@
 package com.ioasys.dependencyinjectionwithhilt.di
 
-import com.ioasys.dependencyinjectionwithhilt.data.local.interactor.UserInteractor
-import com.ioasys.dependencyinjectionwithhilt.data.local.interactor.UserInteractorImpl
+import com.ioasys.dependencyinjectionwithhilt.domain.interactor.UserInteractor
+import com.ioasys.dependencyinjectionwithhilt.domain.interactor.UserInteractorImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

@@ -18,9 +18,11 @@
             app:popEnterAnim="@anim/slide_left_to_middle"
             app:popExitAnim="@anim/slide_middle_to_right"/>
     </fragment>
+
     <fragment
         android:id="@+id/tasksFragment"
         android:name="com.ioasys.dependencyinjectionwithhilt.ui.tasks.TasksFragment"
         android:label="fragment_tasks"
         tools:layout="@layout/fragment_tasks" />
+
 </navigation>

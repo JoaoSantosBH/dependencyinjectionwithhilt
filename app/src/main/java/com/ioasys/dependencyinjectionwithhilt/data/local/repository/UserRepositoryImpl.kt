@@ -1,7 +1,7 @@
 package com.ioasys.dependencyinjectionwithhilt.data.local.repository
 
 import com.ioasys.dependencyinjectionwithhilt.dao.UserDao
-import com.ioasys.dependencyinjectionwithhilt.model.User
+import com.ioasys.dependencyinjectionwithhilt.domain.model.User
 import javax.inject.Inject
 
 class UserRepositoryImpl @Inject constructor (private val userDao: UserDao) :

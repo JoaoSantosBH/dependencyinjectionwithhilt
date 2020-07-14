@@ -1,7 +1,7 @@
-package com.ioasys.dependencyinjectionwithhilt.data.local.interactor
+package com.ioasys.dependencyinjectionwithhilt.domain.interactor
 
 import com.ioasys.dependencyinjectionwithhilt.data.local.repository.UserRepository
-import com.ioasys.dependencyinjectionwithhilt.model.User
+import com.ioasys.dependencyinjectionwithhilt.domain.model.User
 import javax.inject.Inject
 
 class UserInteractorImpl @Inject constructor(private val userRepository: UserRepository): UserInteractor {

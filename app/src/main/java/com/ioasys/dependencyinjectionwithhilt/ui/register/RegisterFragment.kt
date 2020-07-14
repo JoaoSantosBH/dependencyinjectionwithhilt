@@ -9,10 +9,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.ioasys.dependencyinjectionwithhilt.R
-import com.ioasys.dependencyinjectionwithhilt.model.User
+import com.ioasys.dependencyinjectionwithhilt.domain.model.User
 import com.ioasys.dependencyinjectionwithhilt.presentation.register.RegisterViewModel
-import com.ioasys.dependencyinjectionwithhilt.ui.hideKeyboard
-import com.ioasys.dependencyinjectionwithhilt.ui.showToastMessage
+import com.ioasys.dependencyinjectionwithhilt.extensions.hideKeyboard
+import com.ioasys.dependencyinjectionwithhilt.extensions.showToastMessage
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_register.*
 import kotlinx.coroutines.launch

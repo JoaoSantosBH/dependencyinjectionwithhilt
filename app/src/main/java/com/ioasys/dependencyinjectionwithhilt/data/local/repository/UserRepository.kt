@@ -1,6 +1,6 @@
 package com.ioasys.dependencyinjectionwithhilt.data.local.repository
 
-import com.ioasys.dependencyinjectionwithhilt.model.User
+import com.ioasys.dependencyinjectionwithhilt.domain.model.User
 
 interface UserRepository {
     suspend fun saveUser(user: User)
